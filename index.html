@@ -8,7 +8,97 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div id="raiz"></div>
-  <script src="./script.js"></script>
+  <!-- Cria a barra de navegação -->
+  <nav>
+    <div class="content-container">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre-mim">Sobre Mim</a></li>
+        <li><a href="#educacao">Educação</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div class="content-container">
+
+      <!-- Cria a seção inicial do site com os projetos -->
+      <section>
+        <div id="inicio">
+          <h1>Gabriel Stoppa dos Santos</h1>
+          <p>Olá! Sou o Gabriel, bem-vindo(a) ao meu site de portfólio. Sou desenvolvedor full stack com 1 ano de experiência e 3 anos de estudo. Trabalho com tecnologias HTML, CSS, Javascript e React no front end e Node, NestJS e PostgreSQL no back end.</p>
+        </div>
+      </section>
+
+      <!-- Cria a seção sobre mim -->
+      <section  id="sobre-mim">
+        <h2>Sobre Mim</h2>
+        <p>Tenho 24 anos e comecei no mundo da programação há 3 anos. Antes disso,
+          programar era só um hobbie (não deixou de ser). Em 2021 vi que a área da programação tem boas oportunidades e transformei parte do hobbie em trabalho. Amo construir ferramentas úteis com software e também
+          amo o trabalho investigativo de entender a fundo como uma aplicação funciona!</p>
+        <p>
+          No meu tempo livre, gosto de estudar, trabalhar em criações pessoais, ler ficção científica e assistir séries!
+        </p>
+      </section>
+
+      <!-- Cria a seção de educação com os projetos -->
+      <section id="educacao">
+        <h2>Educação</h2>
+        <p>
+          Sou formado em Direito pela Universidade Positivo e no momento estou cursando Engenharia de Software na Uninter. No momento,
+        os idiomas que sei são Português (idioma nativo) e Inglês (avançado).
+        </p>
+        <p>
+          Além do aprendizado acadêmico, também aprendi muito sobre programação buscando cursos online e realizando diversos projetos pessoais.
+        </p>
+      </section>
+
+      <!-- Cria a seção de portfólio com os projetos -->
+      <section id="portfolio">
+        <h2>Portfólio</h2>
+        <div class="portfolio-project">
+          <div>
+            <h3>Veja Markdown</h3>
+            <p>App que permite que o usuário realize edição de texto utilizando a linguagem markdown e veja os efeitos imediatamente</p>
+          </div>
+          <div class="img-container">
+            <a href="https://arquimidio.github.io/vejaMarkdown/" target="_blank"><img src="./assets/images/markdown.png" alt="markdown project image"></a>
+          </div>
+        </div>
+        <div class="portfolio-project">
+          <div>
+            <h3>Where in the World</h3>
+            <p>App que exibe informações de todos os países, possibilitando filtragem e visualização das informações com base na seçleção do usuário</p>
+          </div>
+          <div class="img-container">
+            <a href="https://arquimidio.github.io/whereintheworld/" target="_blank"><img src="./assets/images/wytw.png" alt="where in the world project image"></a>
+          </div>
+        </div>
+        <div class="portfolio-project">
+          <div>
+            <h3>Library</h3>
+            <p>App que permite o armazenamento de informações de leitura de livros, permitindo o acompanhamento da leitura</p>
+          </div>
+          <div class="img-container">
+            <a href="https://arquimidio.github.io/library-odin/" target="_blank"><img src="./assets/images/lib.png" alt="libary project image"></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cria o formulário de contato -->
+      <div id="contato">
+        <div id="contact-form-container">
+          <h2>Formulário de contato</h2>
+          <form id="contact-form">
+            <div class="form-field"><label for="nome">Nome</label><input id="nome" name="nome" type="text" /></div>
+            <div class="form-field"><label for="email">E-mail</label><input id="email" name="email" type="text" /></div>
+            <div class="form-field"><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem"></textarea></div>
+            <button>Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

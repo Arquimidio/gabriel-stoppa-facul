@@ -1,9 +1,11 @@
+/* Inicializa variáveis com as cores globais */
 :root {
   --nav-bg: rgb(24, 24, 26);
   --bg: rgb(33, 33, 33);
   --primary: rgb(199, 48, 78);
 }
 
+/* Modifica o estilo do body */
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
@@ -14,13 +16,20 @@ body {
   line-height: 1.5;
 }
 
-#raiz {
-  display: flex;
-  flex-direction: column;
-}
-
 img{
   max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, a:visited {
+  color: white;
+}
+
+a:hover {
+  color: var(--primary)
 }
 
 nav {
@@ -40,12 +49,7 @@ nav ul {
 }
 
 nav li {
-  cursor: pointer;
   list-style-type: none;
-}
-
-nav li:hover {
-  color: var(--primary);
 }
 
 main {
@@ -66,9 +70,8 @@ main {
 }
 
 #contact-form-container {
-  padding: 2rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
 #contact-form {
@@ -101,24 +104,12 @@ main {
   max-width: 300px;
 }
 
+/* Adiciona a cor primária a todos os headers */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
   color: var(--primary);
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-}
-
-h3 {
-  font-size: 1.5rem;
 }
