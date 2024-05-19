@@ -1,5 +1,5 @@
 // Variável que armazena a página em que o usuário se encontra
-let currentPage = '/portfolio';
+let currentPage = '/';
 
 // Função que gera elementos HTML recursivamente
 function element({ tag = "p", options = {}, listeners = [], children = [] } = {}) {
@@ -46,8 +46,9 @@ const navBar = element({
   children: contentContainer({
     tag: "ul",
     children: [
+      navLink("Início", '/'),
       navLink("Portfólio", '/portfolio'),
-      navLink('Sobre Mim', '/'),
+      navLink('Sobre Mim', '/sobre-mim'),
       navLink('Educação', '/educacao'),
     ]
   })
@@ -218,9 +219,26 @@ const portfolio = () => {
   })
 }
 
+const home = () => (element({
+  tag: "main",
+  children: contentContainer([
+    {
+      tag: "h1",
+      options: { textContent: "Início" }
+    },
+    {
+      tag: "p",
+      options: {
+        textContent: `Olá! Sou o Gabriel, bem-vindo(a) ao meu site de portfólio. Sou desenvolvedor full stack com 1 ano de experiência e 3 anos de estudo. Trabalho com tecnologias HTML, CSS, Javascript e React no front end e Node, NestJS e PostgreSQL no back end.`
+      }
+    }
+  ])
+}))
+
 // Constate que armazena as rotas do site mapeadas, permitindo a geração do conteúdo com base na página selecionada
 const PATHS = {
-  '/': aboutMe,
+  '/': home,
+  '/sobre-mim': aboutMe,
   '/educacao': education,
   '/portfolio': portfolio,
 }
