@@ -46,9 +46,9 @@ const navBar = element({
   children: contentContainer({
     tag: "ul",
     children: [
+      navLink("Portfólio", '/portfolio'),
       navLink('Sobre Mim', '/'),
       navLink('Educação', '/educacao'),
-      navLink("Portfólio", '/portfolio')
     ]
   })
 });
@@ -103,6 +103,7 @@ const education = () => {
   ])})
 }
 
+// FUnção que gera um campo de formulário para ser renderizado
 const formField = (tag = "input", label, name = label) => ({
       tag: "div",
       options: { className: "form-field" },
@@ -145,6 +146,7 @@ const contactForm = () => {
   })
 }
 
+// Função que gera um projeto do portfólio para ser renderizado
 const portfolioProject = (title, description, link, img) => ({
   tag: "div",
   options: { className: 'portfolio-project' },
@@ -242,6 +244,7 @@ function init() {
   route(currentPage)();   
 }
 
+// Inicializa a página inicial após a DOM ter carregado
 document.addEventListener("DOMContentLoaded", () => {
   init();
 })
