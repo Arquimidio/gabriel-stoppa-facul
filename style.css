@@ -36,6 +36,7 @@ nav ul {
   flex: 1;
   gap: 1rem;
   width: 100%;
+  padding: 0;
 }
 
 nav li {
